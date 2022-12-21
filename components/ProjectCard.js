@@ -23,14 +23,3 @@ export default function ProjectCard({projectData, scrollToProj}) {
     </div>
   )
 }
-
-// {
-//     "title":"Elite-Marine",
-//     "stack":"Nextjs, Rails, Docker",
-//     "responsibility": "Full-Stack, UX/UI",
-//     "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec mi eget velit scelerisque ullamcorper. Aenean nisl elit, sagittis ut sapien quis, faucibus fermentum nulla. In nec molestie nunc, vel convallis augue. Sed non efficitur lectus, id tristique elit.",
-//     "figma":"https://www.figma.com/file/ehTHZZUgLjYYdotRyeiE3p/Next.js-Portfolio?node-id=8%3A153&t=bo0quy9J2GG967V5-0",
-//     "github":"",
-//     "live":"https://elite-marine-next.fly.dev/",
-//     "images":"/images/elitemarine1.png"
-// },
