@@ -113,7 +113,30 @@ a {
   transition: all ease-in-out .3s;
   
 }
-
+.animated{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: left;
+  color: transparent;
+}
+.static{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: left;
+  color: transparent;
+}
 .static:hover {
   opacity: 0;
   transition: all ease-in-out .3s;
