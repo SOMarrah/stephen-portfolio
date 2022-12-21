@@ -5,18 +5,34 @@ import HeroComponent from './components/HeroComponent'
 import aboutData from '../utils/aboutData.json'
 import ProjectCard from './components/ProjectCard'
 import projectData from '../utils/projectData.json'
+import { useRef } from 'react'
 
 export default function Home() {
+  const scrollToAbt = useRef(null);
+  const scrollToProj = useRef(null);
+  const scrollToTop = useRef(null);
+    const handleClick = (check) => {
+      if(check === 1){
+        scrollToAbt.current?.scrollIntoView({behavior: 'smooth'});
+      }
+      else if(check === 2){
+        scrollToProj.current?.scrollIntoView({behavior: 'smooth'});
+      }
+      else if(check === 3){
+        scrollToTop.current?.scrollIntoView({behavior: 'smooth'});
+      }
+        
+        
+    }
   return (
     <div style={{height:"100%"}}>
-    <HeroComponent/>
-    <div style={{display:"flex", justifyContent:"space-between", flexDirection:"column"}}>
-      
-      <Header/>
-      <AboutCard aboutData={aboutData}/>
-      <ProjectCard projectData={projectData}/>
-    </div>
-    
+      <HeroComponent scrollToTop={scrollToTop} handleClick={handleClick}/>
+      <div style={{display:"flex", justifyContent:"space-between", flexDirection:"column"}}>
+        
+        <Header handleClick={handleClick}/>
+        <AboutCard scrollToAbt={scrollToAbt} aboutData={aboutData}/>
+        <ProjectCard scrollToProj={scrollToProj} projectData={projectData}/>
+      </div>
     </div>
   )
 }

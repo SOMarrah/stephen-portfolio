@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-export default function ProjectCard({projectData}) {
+export default function ProjectCard({projectData, scrollToProj}) {
   return (
-    <div style={{position:"relative", width:"55%", display:"flex", margin:"10px auto", padding:"4px", flexFlow: "column nowrap", placeContent: "center", alignItems: "center"}}>
+    <div  ref={scrollToProj}style={{position:"relative", width:"55%", display:"flex", margin:"10px auto", padding:"4px", flexFlow: "column nowrap", placeContent: "center", alignItems: "start"}}>
         {projectData ?
         projectData.map((value, index) => {
             return(
