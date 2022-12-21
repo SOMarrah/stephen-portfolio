@@ -2,15 +2,20 @@ import Image from 'next/image'
 import AboutCard from '../components/AboutCard'
 import Header from '../components/Header'
 import HeroComponent from '../components/HeroComponent'
-import aboutData from '../utils/aboutData.json'
+import abtData from '../utils/aboutData.json'
 import ProjectCard from '../components/ProjectCard'
 import projectData from '../utils/projectData.json'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Home() {
+  const [aboutData, setAboutData ]= useState(null)
   const scrollToAbt = useRef(null);
   const scrollToProj = useRef(null);
   const scrollToTop = useRef(null);
+  useEffect(() => {
+    setAboutData(abtData)
+  }, []);
+  
     const handleClick = (check) => {
       if(check === 1){
         scrollToAbt.current?.scrollIntoView({behavior: 'smooth'});
