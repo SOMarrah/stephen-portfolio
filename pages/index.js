@@ -6,12 +6,18 @@ import abtData from '../utils/aboutData.json'
 import ProjectCard from '../components/ProjectCard'
 import projectData from '../utils/projectData.json'
 import { useEffect, useRef, useState } from 'react'
+import Interests from '../components/Interests'
+import ContactCard from '../components/ContactCard'
+import SocialCard from '../components/SocialCard'
+
+
 
 export default function Home() {
   const [aboutData, setAboutData ]= useState(null)
   const scrollToAbt = useRef(null);
   const scrollToProj = useRef(null);
   const scrollToTop = useRef(null);
+  // to simulate a fetch request and set the data on the front end
   useEffect(() => {
     setAboutData(abtData)
   }, []);
@@ -37,6 +43,10 @@ export default function Home() {
         <Header handleClick={handleClick}/>
         <AboutCard scrollToAbt={scrollToAbt} aboutData={aboutData}/>
         <ProjectCard scrollToProj={scrollToProj} projectData={projectData}/>
+        <Interests/>
+        <ContactCard/>
+        <SocialCard/>
+
       </div>
     </div>
   )
