@@ -1,6 +1,12 @@
 import { useRef, useEffect, useState } from 'react';
 
 export default function AboutObserver({data}) {
+    if(!data){
+        data = {
+            "title": "UAV Online",
+            "text": "I am a USMC veteran, deployed to Afghanistan, and I flew drones for 4 years. This was my first experience working intensively with technology along with collaborating in cross-team environments, and holding leadership positions. "
+        }
+    }
     const myRef = useRef(null);
     const [cardVis, updateCardVis] = useState(null);
     useEffect(() => {
