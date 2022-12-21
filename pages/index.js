@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import AboutCard from './components/AboutCard'
-import Header from './components/Header'
-import HeroComponent from './components/HeroComponent'
+import AboutCard from '../components/AboutCard'
+import Header from '../components/Header'
+import HeroComponent from '../components/HeroComponent'
 import aboutData from '../utils/aboutData.json'
-import ProjectCard from './components/ProjectCard'
+import ProjectCard from '../components/ProjectCard'
 import projectData from '../utils/projectData.json'
 import { useRef } from 'react'
 

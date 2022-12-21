@@ -1,6 +1,3 @@
-import Image from "next/image"
-import { useRef, useEffect, useState } from 'react';
-import { useInView } from "react-intersection-observer";
 import AboutObserver from "./AboutObserver";
 
 export default function AboutCard({aboutData, scrollToAbt}) {
