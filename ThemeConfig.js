@@ -1,6 +1,7 @@
 import { createGlobalStyle} from "styled-components"
 
 export const lightTheme = {
+  
   body: '#FFF',
   text: '#363537',
   toggleBorder: '#FFF',
@@ -8,10 +9,10 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
-  body: '#0A0A11',
+  body: "linear-gradient(360deg, rgba(25,22,41,1) 0%, rgba(10,10,17,1) 50%)",
   text: '#FAFAFA',
-//   toggleBorder: '#6B8096',
-    // background: "rgba(10,10,17,1)"
+  background: "linear-gradient(360deg, rgba(25,22,41,1) 0%, rgba(10,10,17,1) 50%)"
+  // background: ""
 }
 
 export const GlobalStyles = createGlobalStyle`

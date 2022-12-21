@@ -106,3 +106,24 @@ a {
     color-scheme: dark;
   }
 }
+
+.heroButton:hover{
+  background: #F45B7E !important;
+  color: rgba(25,22,41,1) !important;
+  transition: all ease-in-out .3s;
+  
+}
+
+.static:hover {
+  opacity: 0;
+  transition: all ease-in-out .3s;
+}
+
+.links{
+  user-select: none;
+  z-index: 1;
+  transition:all ease-in-out .2s;
+}
+.links:hover{
+  color:#F45B7E;
+}
