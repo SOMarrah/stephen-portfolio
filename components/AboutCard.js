@@ -5,7 +5,7 @@ export default function AboutCard({aboutData, scrollToAbt}) {
   return (
     <>
     {aboutData ?
-    <div ref={scrollToAbt} style={{position:"relative", width:"55%", display:"flex", margin:"10px auto", padding:"4px", flexFlow: "column nowrap", placeContent: "center", alignItems: "center"}}>
+    <div  ref={scrollToAbt} className="aboutGrid" style={{position:"relative", display:"grid", margin:"10px auto", padding:"4px", gridTemplateColumns:"repeat(1, 1fr)",placeContent: "center", alignItems: "center"}}>
         {aboutData ?
         aboutData.map((value, index) => {
             return(

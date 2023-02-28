@@ -13,11 +13,11 @@ export default function ProjectCard({projectData, scrollToProj}) {
         setShowModal(true)
       }
   return (
-    <div  ref={scrollToProj}style={{position:"relative", width:"55%", display:"flex", margin:"10px auto", padding:"4px", flexFlow: "column nowrap", placeContent: "center", alignItems: "start"}}>
+    <div  ref={scrollToProj}style={{position:"relative", display:"grid", margin:"10px auto",width:"100%", padding:"4px"}}>
         {projectData ?
         projectData.map((value, index) => {
             return(
-                <div key={index} onClick={()=>openModal(value)} style={{margin:"20px", padding:"8px", display: "flex",flexFlow: "row nowrap", placeContent: "center", alignItems: "center"}} >
+                <div className="ProjectCard" key={index} onClick={()=>openModal(value)} style={{margin:"20px", padding:"8px", display: "flex",flexFlow: "row nowrap", alignItems: "center"}} >
                     
                         <img src={value.images} alt="" style={{height:"auto", width:"400px", filter:"saturate(0)"}}/>
                     

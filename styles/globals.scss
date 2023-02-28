@@ -106,14 +106,28 @@ a {
     color-scheme: dark;
   }
 }
-
+.heroButton{
+  user-select: none;
+}
 .heroButton:hover{
   background: #F45B7E !important;
   color: rgba(25,22,41,1) !important;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out .4s;
   
 }
 
+.aboutGrid > div:nth-child(even):not(:nth-child(odd)){
+  margin-left: 200px !important;
+}
+.interests:hover{
+  scale: 1.2;
+}
+.ProjectCard:nth-child(even){
+  justify-content: flex-start !important;
+}
+.ProjectCard:nth-child(odd){
+  justify-content: flex-end !important;
+}
 .animated{
   position: absolute;
   height: 100%;
