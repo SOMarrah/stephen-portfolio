@@ -19,7 +19,7 @@ export default function AboutObserver({data}) {
   return (
     <>
     {data ?
-        <div ref={myRef} style={{margin:"20px", padding:"8px", display: "flex",flexFlow: "row nowrap", placeContent: "center", alignItems: "center", opacity: cardVis ? 1 : 0, transition:"all ease-in-out 2s"}} >
+        <div ref={myRef}  style={{margin:"20px",marginTop:"100px" ,marginBottom:"200px" , padding:"8px", display: "flex",flexFlow: "row nowrap", placeContent: "center", alignItems: "center", opacity: cardVis ? 1 : 0, transition:"all ease-in-out 2s"}} >
         <div>
             <img src="/images/d4.png" alt="d4 dice" style={{height:"auto", width:"100px"}}/>
         </div>
