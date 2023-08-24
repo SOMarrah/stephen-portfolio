@@ -7,7 +7,7 @@
         "figma":"https://www.figma.com/file/ehTHZZUgLjYYdotRyeiE3p/Next.js-Portfolio?node-id=8%3A153&t=bo0quy9J2GG967V5-0",
         "github":"",
         "live":"https://elite-marine-next.fly.dev/",
-        "images":"/images/elitemarine1.png"
+        "images":["/images/elitemarine1.png", "/images/elitemarine2.png", "/images/elitemarine3.png"]
     },
     {
         "title":"Pokedex",
@@ -17,7 +17,7 @@
         "figma":"",
         "github":"",
         "live":"",
-        "images":"/images/elitemarine1.png"
+        "images":["/images/pokedex1.png", "/images/pokedex2.png", "/images/pokedex3.png"]
     },
     {
         "title":"Grubber",
@@ -27,7 +27,7 @@
         "figma":"",
         "github":"",
         "live":"",
-        "images":"/images/elitemarine1.png"
+        "images":["/images/elitemarine1.png"]
     },
     {
         "title":"MTB-Fantasy League",
@@ -37,6 +37,6 @@
         "figma":"",
         "github":"",
         "live":"",
-        "images":"/images/elitemarine1.png"
+        "images":["/images/elitemarine1.png"]
     }
 ]

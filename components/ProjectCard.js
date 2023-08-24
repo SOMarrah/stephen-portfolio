@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { useState } from "react"
+import Carousel from "./Carousel"
 
 export default function ProjectCard({projectData, scrollToProj}) {
     const [showModal, setShowModal] = useState(false)
@@ -19,7 +20,12 @@ export default function ProjectCard({projectData, scrollToProj}) {
             return(
                 <div className="ProjectCard" key={index} onClick={()=>openModal(value)} style={{margin:"20px", padding:"8px", display: "flex",flexFlow: "row nowrap", alignItems: "center"}} >
                     
-                        <img src={value.images} alt="" style={{height:"auto", width:"400px", filter:"saturate(0)"}}/>
+                        {value.images?
+
+                        <img src={value.images[0]} alt={value.images} style={{height:"auto", width:"400px", filter:"saturate(0)"}}/>
+                        
+                        
+                      : null}
                     
                     <div>
                         <div style={{textAlign:"left", marginLeft:"20px"}}>
@@ -47,7 +53,11 @@ export default function ProjectCard({projectData, scrollToProj}) {
                               {/* body */}
                               <div >
                                 <div >
-                                <img src={modalData.images} alt="" style={{height:"auto", width:"auto", filter:"saturate(1)", float:"right", marginRight:"20%"}}/>
+                                {modalData.images?
+                                
+                                  <Carousel data={modalData.images} />
+                                
+                                :null}
                                   <p style={{margin: "20px"}}>
                                     {modalData.text}
                                   </p>
