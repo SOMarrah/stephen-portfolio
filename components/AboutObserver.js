@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import FadeIn from './FadeIn';
 
 export default function AboutObserver({data}) {
     if(!data){
@@ -7,19 +8,13 @@ export default function AboutObserver({data}) {
             text: "I am a USMC veteran, deployed to Afghanistan, and I flew drones for 4 years. This was my first experience working intensively with technology along with collaborating in cross-team environments, and holding leadership positions. "
         }
     }
-    const myRef = useRef(null);
-    const [cardVis, updateCardVis] = useState(null);
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries, observer)=>{
-            const entry = entries[0];
-            updateCardVis(entry.isIntersecting);
-        });
-        observer.observe(myRef.current);
-      }, []);
+    
+    
   return (
     <>
     {data ?
-        <div ref={myRef}  style={{margin:"20px",marginTop:"100px" ,marginBottom:"200px" , padding:"8px", display: "flex",flexFlow: "row nowrap", placeContent: "center", alignItems: "center", opacity: cardVis ? 1 : 0, transition:"all ease-in-out 2s"}} >
+        <FadeIn direction={1}>
+        <div style={{margin:"20px",marginTop:"100px" ,marginBottom:"200px" , padding:"8px", display: "flex",flexFlow: "row nowrap", placeContent: "center", alignItems: "center"}} >
         <div>
             <img src="/images/d4.png" alt="d4 dice" style={{height:"auto", width:"100px"}}/>
         </div>
@@ -28,6 +23,7 @@ export default function AboutObserver({data}) {
             <p style={{background:"grey", margin:"10px", padding:"15px", borderRadius:"10px", zIndex:"0"}}>{data.text}</p>
         </div>
         </div>
+        </FadeIn>
     : null}
     </>
   )

@@ -116,6 +116,43 @@ a {
   
 }
 
+.flexbox{
+  display: flex;
+  flex-direction: row;
+}
+
+.paginationActive{
+  border-radius: 100%;
+  margin: 4px;
+  pointer-events: none;
+  background-color: #038DC4;
+  color: #038DC4;
+  transition-delay: 100ms;
+  transition: ease-in-out;
+  height: 20px;
+  width: 20px;
+}
+.paginationInActive{
+  height: 20px;
+  width: 20px;
+  margin: 4px;
+  cursor: pointer;
+  background-color: #083446;
+  user-select: none;
+  border-radius: 100%;
+  outline: auto;
+  outline-width: 2.5px;
+  outline-offset: 1px;
+  outline-color: #878585;
+  transition-delay: 100ms;
+  transition: ease-in-out;
+}
+.paginationInActive:hover{
+  color: #038DC4;
+  background-color: #038DC4;
+  outline-color: #cad3d7;
+
+}
 .aboutGrid > div:nth-child(even):not(:nth-child(odd)){
   margin-left: 200px !important;
 }
